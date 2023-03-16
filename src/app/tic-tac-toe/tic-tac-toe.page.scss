@@ -1,0 +1,11 @@
+.tictactoe-board {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  width: 192px;
+  height: 204px;
+}
+
+.game-container {
+  margin: 24px;
+}

@@ -1,0 +1,8 @@
+<ion-item *ngIf="gamePath" [routerLink]="gamePath" [detail]="false">
+  <ion-icon [src]="gameIcon" class="game-icon"></ion-icon>
+  <ion-label class="ion-text-wrap">
+    <h1>
+      {{ gameTitle }}
+    </h1>
+  </ion-label>
+  </ion-item>

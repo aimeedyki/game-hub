@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Tic Tac Toe</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="game-container">
+    <div class="tictactoe-board">
+      <div *ngFor="let i of [0, 1, 2]">
+        <div *ngFor="let j of [0, 1, 2]">
+          <app-cell [cellValue]="board[i][j]"> </app-cell>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
