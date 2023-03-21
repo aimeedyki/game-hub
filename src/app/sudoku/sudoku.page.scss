@@ -1,0 +1,12 @@
+.sudoku-board {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  width: 576px;
+  height: 612px;
+  margin-bottom: 20px;
+}
+
+.game-container {
+  margin: 24px;
+}

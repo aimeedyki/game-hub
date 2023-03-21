@@ -1,3 +1,15 @@
+.game-container {
+  margin: 24px;
+}
+
+.game-over {
+  color: #b4450a;
+}
+
+.proceed-button__container {
+  margin-top: 30px;
+}
+
 .tictactoe-board {
   display: flex;
   flex-wrap: wrap;
@@ -6,6 +18,15 @@
   height: 204px;
 }
 
-.game-container {
-  margin: 24px;
+.tictactoe-select {
+  margin: 8px 16px;
+}
+
+.tictactoe-select label {
+  margin: 10px;
+  font-size: 20px;
+}
+
+.user-win {
+  color: #758e4f;
 }

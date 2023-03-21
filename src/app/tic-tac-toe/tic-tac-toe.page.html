@@ -5,13 +5,44 @@
 </ion-header>
 
 <ion-content>
-  <div class="game-container">
-    <div class="tictactoe-board">
-      <div *ngFor="let i of [0, 1, 2]">
-        <div *ngFor="let j of [0, 1, 2]">
-          <app-cell [cellValue]="board[i][j]"> </app-cell>
+  <div *ngIf="hasSelectedMarker; else markerSelection">
+    <div class="game-container">
+      <div class="tictactoe-board">
+        <div *ngFor="let i of [0, 1, 2]">
+          <div *ngFor="let j of [0, 1, 2]">
+            <app-cell (click)="doPlayerMove(i, j)" [cellValue]="board[i][j]">
+            </app-cell>
+          </div>
         </div>
       </div>
     </div>
+    <div>
+      <h3
+        *ngIf="gameOverText; else turnContent"
+        [ngClass]="{ 'game-over': !isUsersWin, 'user-win': isUsersWin }"
+      >
+        {{ gameOverText }}
+      </h3>
+      <ng-template #turnContent>
+        <h3 *ngIf="isUserTurn; else computerTurn">Your turn!</h3>
+        <ng-template #computerTurn
+          ><h3 v-else>Computer's turn!</h3></ng-template
+        >
+      </ng-template>
+    </div>
   </div>
+  <ng-template #markerSelection>
+    <h3>Please choose a marker</h3>
+    <div class="tictactoe-select">
+      <input type="radio" id="x" value="X" v-model="userMarker" />
+      <label for="one">X</label>
+    </div>
+    <div class="tictactoe-select">
+      <input type="radio" id="o" value="O" v-model="userMarker" />
+      <label for="two">O</label>
+    </div>
+    <div class="proceed-button__container">
+      <app-button [onClick]="setHasSelectedMarker" [label]="'Proceed'" />
+    </div>
+  </ng-template>
 </ion-content>

@@ -4,20 +4,19 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ButtonComponentModule } from '../button/button.module';
+import { SudokuPageRoutingModule } from './sudoku-routing.module';
 import { CellComponentModule } from '../cell/cell.module';
-import { TicTacToePageRoutingModule } from './tic-tac-toe-routing.module';
-import { TicTacToePage } from './tic-tac-toe.page';
+
+import { SudokuPage } from './sudoku.page';
 
 @NgModule({
   imports: [
-    ButtonComponentModule,
     CellComponentModule,
     CommonModule,
     FormsModule,
     IonicModule,
-    TicTacToePageRoutingModule,
+    SudokuPageRoutingModule
   ],
-  declarations: [TicTacToePage],
+  declarations: [SudokuPage]
 })
-export class TicTacToePageModule {}
+export class SudokuPageModule {}
