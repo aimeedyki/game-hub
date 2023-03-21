@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'home/tic-tac-toe',
     loadChildren: () => import('./tic-tac-toe/tic-tac-toe.module').then( m => m.TicTacToePageModule)
   },
+  {
+    path: 'home/sudoku',
+    loadChildren: () => import('./sudoku/sudoku.module').then( m => m.SudokuPageModule)
+  },
 ];
 
 @NgModule({

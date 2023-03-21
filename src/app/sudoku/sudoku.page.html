@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Sudoku</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="game-container">
+    <div class="sudoku-board">
+      <div *ngFor="let i of [0, 1, 2, 3, 4, 5, 6, 7, 8]">
+        <div *ngFor="let j of [0, 1, 2, 3, 4, 5, 6, 7, 8]">
+          <app-cell
+            (click)="doPlayerMove(i, j)"
+            [cellValue]="board[i][j]"
+          ></app-cell>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
